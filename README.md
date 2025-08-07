@@ -1,6 +1,6 @@
 # ✉️ AI Email Sender
 
-A full-stack AI-powered email generation and sending web application.
+A complete web application that uses AI to generate and send professional emails effortlessly.
 
 ---
 
@@ -137,3 +137,4 @@ AI-Email-Sender/
 ## 🛡️ License
 
 This project is licensed under the [MIT License](LICENSE).
+

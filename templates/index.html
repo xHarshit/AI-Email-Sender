@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Email Sender</title>
+  <style>
+    /* Reset some defaults */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7ff, #f8f9fa);
+      color: #333;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #004d99;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.2s ease;
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #0077cc;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.1);
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.25s ease;
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+
+    #status {
+      font-weight: 500;
+      color: #444;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    textarea#output {
+      height: 180px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <script src="/static/script.js" defer></script>
+</head>
+<body>
+
+  <h1>AI Generated Email Sender</h1>
+
+  <div class="container">
+    <div class="section">
+      <input type="email" id="to" placeholder="Recipient Email" required>
+      <input type="text" id="subject" placeholder="Subject" required>
+      <textarea id="prompt" placeholder="Describe what the email should say..." rows="4"></textarea>
+      <button onclick="generateEmail()">✍️ Generate Email</button>
+    </div>
+
+    <div class="section">
+      <textarea id="output" placeholder="Generated email will appear here..."></textarea>
+      <button onclick="sendEmail()">📨 Send Email</button>
+      <p id="status"></p>
+    </div>
+  </div>
+
+</body>
+</html>

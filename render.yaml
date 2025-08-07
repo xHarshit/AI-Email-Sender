@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ai-email-sender
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: GROQ_API_KEY
+        value: ${GROQ_API_KEY}
+      - key: EMAIL_USER
+        value: ${EMAIL_USER}
+      - key: EMAIL_PASS
+        value: ${EMAIL_PASS}

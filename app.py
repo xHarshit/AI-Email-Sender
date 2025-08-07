@@ -28,7 +28,7 @@ def generate_email():
     }
 
     data = {
-        "model": "llama3-70b-8192",  # ✅ Updated model
+        "model": "llama3-70b-8192",
         "messages": [
             {"role": "user", "content": f"Write a professional email for: {prompt}"}
         ]
